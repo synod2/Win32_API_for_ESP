@@ -72,7 +72,7 @@ case WM_PAINT: {
 
     - LWA_ALPHA 와 LWA_COLORKEY 플래그 중 선택해서 쓸 수 있는데, 2번쨰 인자가 색상, 세번쨰 인자가 불투명도를 조절한다. 이때 LWA_ALPHA 만 사용하면 화면 위 상태창과 글자까지 전부 투명화 되어 안보이니까 COLORKEY를 사용하자.
 
-    ![win32API%20-%20GDI%20overlay%201ee022211b87473aaab9eabe435822f8/Untitled%201.png](img2/Untitled 1.png)
+    ![win32API%20-%20GDI%20overlay%201ee022211b87473aaab9eabe435822f8/Untitled%201.png](img2/Untitled_1.png)
 
     투명화가 잘 되는데, 테투리랑 창 배경, 글자 배경색이 거슬린다.  WM_PAINT case에 아래 코드 추가한다.
 
@@ -82,7 +82,7 @@ case WM_PAINT: {
 
     hdc 핸들의 배경색을 투명으로 변경하면 글자색도 투명하게 바뀐다. 
 
-    ![win32API%20-%20GDI%20overlay%201ee022211b87473aaab9eabe435822f8/Untitled%202.png](img2/Untitled 2.png)
+    ![win32API%20-%20GDI%20overlay%201ee022211b87473aaab9eabe435822f8/Untitled%202.png](img2/Untitled_2.png)
 
     그 다음, CreateWindowW 함수를 CreateWindowEx로 변경 할 건데, 첫번째 인자로 WS_EX_TOPMOST | WS_EX_TRANSPARENT를 추가하고 , 네 번쨰(이전의 세번쨰 - S_OVERLAPPEDWINDOW) 인자를 WS_POPUP으로 교체 해줄거다. 
 
@@ -97,7 +97,7 @@ case WM_PAINT: {
 
     실행시
 
-    ![win32API%20-%20GDI%20overlay%201ee022211b87473aaab9eabe435822f8/Untitled%203.png](img2/Untitled 3.png)
+    ![win32API%20-%20GDI%20overlay%201ee022211b87473aaab9eabe435822f8/Untitled%203.png](img2/Untitled_3.png)
 
     이제 특정 창 이름을 기준으로 하여 그 창위 크기에 맞게 오버레이가 뜨고, 창을 따라가게끔 만들어야한다. 
 
@@ -122,7 +122,7 @@ case WM_PAINT: {
 
     이후 창 생성시 시에 찾아온 Rect의 가로,세로 길이를 가지고 오버레이를 만들어보자 
 
-    ![win32API%20-%20GDI%20overlay%201ee022211b87473aaab9eabe435822f8/Untitled%204.png](img2/Untitled 4.png)
+    ![win32API%20-%20GDI%20overlay%201ee022211b87473aaab9eabe435822f8/Untitled%204.png](img2/Untitled_4.png)
 
     창 이름으로 찾기가 된거같..은데 뭔가 미묘하게 크기가 다르다. 뭐지 
 
@@ -163,11 +163,11 @@ case WM_PAINT: {
     CreateThread(0, 0, (LPTHREAD_START_ROUTINE)SetWindow, hWnd, 0, 0);
     ```
 
-    ![win32API%20-%20GDI%20overlay%201ee022211b87473aaab9eabe435822f8/Untitled%205.png](img2/Untitled 5.png)
+    ![win32API%20-%20GDI%20overlay%201ee022211b87473aaab9eabe435822f8/Untitled%205.png](img2/Untitled_5.png)
 
     잘 따라온다. 이제 오버레이 속성을 다 조정하면 
 
-    ![win32API%20-%20GDI%20overlay%201ee022211b87473aaab9eabe435822f8/Untitled%206.png](img2/Untitled 6.png)
+    ![win32API%20-%20GDI%20overlay%201ee022211b87473aaab9eabe435822f8/Untitled%206.png](img2/Untitled_6.png)
 
     굳. 지금은 지뢰찾기 창을 끄면 같이 꺼진다. 
 
