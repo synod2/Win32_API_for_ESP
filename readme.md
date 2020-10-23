@@ -6,7 +6,7 @@
 
 기초적인 win32 API 사용법 
 
-[2.Win32API - GDI](gdi tutorials/readme.md)
+[2.Win32API - GDI](gdi_tutorials/readme.md)
 
 win32API에서 GDI 사용법과 이를 이용한 overlay 만들기 
 
