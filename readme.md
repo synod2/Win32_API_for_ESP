@@ -26,11 +26,11 @@
 
 ​	최종적으로 좌표계 연산을 통해 화면상에서 적의 위치를 보여주는 ESP 제작
 
-[DLL Injection -1. 인젝션 실습](Injection1)
+[DLL Injection -1. 인젝션 실습](injection1)
 
 ​	dll 인젝션 코드 작성 및 실습 
 
-[DLL Injection -2. 코드 패치](Injection2)
+[DLL Injection -2. 코드 패치](injection2)
 
 ​	지뢰찾기 게임에 타이머 정지 코드 패치 실습 	
 
