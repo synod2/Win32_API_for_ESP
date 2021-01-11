@@ -34,7 +34,9 @@
 
 ​	지뢰찾기 게임에 타이머 정지 코드 패치 실습 	
 
+[DLL Injection -3. 메모리 변조](injection3)
 
+​	Assualt cube에 메모리 변조 코드 실습	
 
 ---
 
